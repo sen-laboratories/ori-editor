@@ -1,15 +1,8 @@
 /*
- * Copyright 2007-2012 Haiku, Inc.
- * Distributed under the terms of the MIT License.
- *
- * Authors:
- *		Ryan Leavengood <leavengood@gmail.com>
- *		John Scipione <jscipione@gmail.com>
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: 2007-2026 SEN Labs e.U.
  */
-#ifndef B_ABOUT_WINDOW_H
-#define B_ABOUT_WINDOW_H
-
-
+#pragma once
 #include <GroupView.h>
 #include <Window.h>
 #include <View.h>
@@ -79,6 +72,3 @@ private:
 			// FBC Padding
 			uint32			_reserved[20];
 };
-
-
-#endif	// B_ABOUT_WINDOW_H
