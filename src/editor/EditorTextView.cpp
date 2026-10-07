@@ -804,7 +804,7 @@ EditorTextView::HandleFileDrop(BMessage* dropMessage)
     BString linkUrl;
 
     // SEN:ID if available
-    char senId[SEN_ID_LEN];
+    char senId[sen::id::kLength];
     result = SenConnector::QueryForSenId(&ref, senId);
 
     if (result == B_OK) {

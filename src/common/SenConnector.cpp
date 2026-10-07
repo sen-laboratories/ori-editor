@@ -15,11 +15,11 @@ status_t SenConnector::QueryForSenId(entry_ref *ref, const char *senId)
     status_t result;
     spdlog::debug("query for SEN:ID for ref {}", ref->name);
 
-    BMessage query(SEN_QUERY_ID_FOR_REF);
+    BMessage query(sen::cmd::kQueryIdForRef);
     query.AddRef("refs", ref);
     query.AddBool("createIfMissing", true);
 
-    BMessenger messenger(SEN_SERVER_SIGNATURE);
+    BMessenger messenger(sen::kServerSignature);
     BMessage reply;
 
     if (messenger.SendMessage(&query, &reply) == B_OK) {
